@@ -1,0 +1,27 @@
+- Image Docker nginx + php + mysql
+- Base de données
+    - Entité Score (id, time);
+    - voir le tri en SQL sur un temps du plus court au plus long
+- PHP
+    - Connexion PDO à la BDD
+    - Utiliser un .env
+    - Récupérer les scores enregistrés en BDD
+    - Si le joueur gagne enregistrer à la fin de la partie le temps effectué
+
+- JS
+    - Pop-in explications du jeu + démarrer
+    - Initialiser le jeu au clic sur démarrer 
+    - Lancer le timer
+    - Evenement partie gagnée = requête Ajax pour enregistrer le temps en BDD
+    - Pop-ins pour fin de jeu gagné/perdu
+    - Tableau des cartes initiales
+    - Tableau des cartes découvertes
+    - Tableau des cartes cliquées
+
+Algo : 
+
+Au clic sur une carte, on vérifié si une autre est cliquée dans ce cas comparer leur ids. Si égaux on les laisse découvertes et on affiche un message de succès au joueur. Si erreur on les retourne de nouveau. 
+Mouvement des cartes = 2 images que l'on switch
+Si tableau cartes découvertes = tableau cartes initiales => Fin du jeu et victoire
+
+    
