@@ -24,4 +24,4 @@ Au clic sur une carte, on vérifié si une autre est cliquée dans ce cas compar
 Mouvement des cartes = 2 images que l'on switch
 Si tableau cartes découvertes = tableau cartes initiales => Fin du jeu et victoire
 
-    
+docker exec -i mysql-container mysql -umyuser -ppassword mydb < db.sql

@@ -1,24 +1,18 @@
 <?php
 
-//On importe notre connexion à la base de données afin d'y accéder
-require('db.php');
-//On importe également notre classe Score pour en créer un objet
-require('score.php');
-
-function getScores(){
-    $req = $this->db->query('SELECT * FROM score ORDER BY time ASC');
-
-    return $req->fetchAll();
+function isValidTimeStamp($timestamp)
+{
+    return ((string) (int) $timestamp === $timestamp) 
+        && ($timestamp <= PHP_INT_MAX)
+        && ($timestamp >= ~PHP_INT_MAX);
 }
 
-function setScore($time){
-    $score = new Score();
-    $score->setTime($time);
-    
-    $req = $this->db->prepare('INSERT INTO score(time) VALUES(:time)');
-    $req->execute(array(
-        'time' => $score
-    ));
-
-    return 1;
+function getScores()
+{
+    require_once('db.php');
+    $sql = "SELECT * FROM score ORDER BY timer ASC";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $scores;
 }
