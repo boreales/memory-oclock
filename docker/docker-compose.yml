@@ -23,6 +23,6 @@ services:
         container_name: mysql-container  
         environment:  
           MYSQL_ROOT_PASSWORD: secret  
-          MYSQL_DATABASE: mydb  
-          MYSQL_USER: myuser  
-          MYSQL_PASSWORD: password
+          MYSQL_DATABASE: ${MYSQL_DB}  
+          MYSQL_USER: ${MYSQL_USER}  
+          MYSQL_PASSWORD: ${MYSQL_PASSWORD}

@@ -25,7 +25,6 @@ $(document).on('click', '.card', function() {
     else{
         //Si c'est la première carte que l'on clique alors on l'ajoute à notre tableau de cartes visibles
         cardsVisible.push(id);
-        console.log("Premier clic",cardsVisible);
     }
 });
 
@@ -82,7 +81,6 @@ function countDownTimer(){
 }
 
 function checkCards(first, second){
-    console.log('Check', first + second);
     //On vérifie si le premier id de la carte visible est égal à celui de la carte qu'on vient de cliquer
     if(first == second){
         //Dans ce cas c'est gagné et on ajoute l'id des cartes au tableau des cartes réussies
@@ -98,13 +96,11 @@ function checkCards(first, second){
             //On rafraichît la page afin que le joueur recommence une partie.
             window.location.reload();
         }
-        console.log('Gagnées', cardsWon);
         //On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id des cartes désormais trouvées
         cardsVisible = [];
     }
     //Si les deux id sont différents c'est perdu
     else{
-        console.log('Perdu', first + ' ' + second);
         //On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id des cartes désormais trouvées
         cardsVisible = [];
         //On retourne de nouveau les cartes en affichant l'image servant pour le dos de chacune
