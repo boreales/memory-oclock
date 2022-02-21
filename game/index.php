@@ -1,8 +1,6 @@
 <?php
-require('./vendor/autoload.php');
-// On importe le fichier functions pour pouvoir récupérer les scores et enregistrer les prochains
+//On importe le fichier functions pour pouvoir récupérer les scores et enregistrer les prochains
 require('php/functions.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +31,6 @@ require('php/functions.php');
             ?>
         </div>
         <button id="start-button" class="btn btn-primary">Jouer</button>
-        <!-- <button id="test-save" class="btn btn-primary">Test Save</button> -->
         <div class="inner-container">
             <div class="game-container">
                 <div class="game-container-inner">

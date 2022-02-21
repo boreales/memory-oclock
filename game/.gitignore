@@ -1,2 +1,3 @@
+#On précise via ce fichier quels sont les éléments de notre projet qu'il est inutile d'envoyer sur Github
 /vendor/
 .env

@@ -7,11 +7,6 @@ $(document).ready(function(){
     $('#start-button').click(function() {
         initialize();
     });
-    $('#test-save').click(function() {
-        let time = Date.now();
-        console.log(time);
-        saveScore(time);
-    });
 });
 
 $(document).on('click', '.card', function() {
@@ -84,10 +79,6 @@ function countDownTimer(){
             window.location.reload();
         }
     }, 1000);
-}
-
-function flipCard(){
-
 }
 
 function checkCards(first, second){
