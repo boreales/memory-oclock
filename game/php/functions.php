@@ -14,5 +14,12 @@ function getScores()
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $scores;
+    $html = '';
+    foreach($scores as $score) {
+        $html .= '<p>#'.$score['id']. ' - ' . gmdate("i:s", $score['timer']) . '</p>';
+    }
+    if(sizeof($scores) === 0) {
+        $html .= '<p>Aucun score enregistré</p>';
+    }
+    return $html;
 }

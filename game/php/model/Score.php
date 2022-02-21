@@ -1,5 +1,5 @@
 <?php
-// Classe Score pour enregistrer les meilleurs temps en base de données
+// On crée une classe Score correspondant à la table Score dans la base de données
 
 class Score{
     private $id; //On initialise l'identifiant unique de la table score pour la base de données

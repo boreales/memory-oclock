@@ -1,12 +1,12 @@
 <?php
-
+require('./vendor/autoload.php');
 // On importe le fichier functions pour pouvoir récupérer les scores et enregistrer les prochains
 require('php/functions.php');
 
 ?>
 
 <!DOCTYPE html>
-<title>Memory</title>
+<title>Cartes Mémoire</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/main.css" rel="stylesheet">
@@ -28,15 +28,8 @@ require('php/functions.php');
         <div class="best-scores">
             <h3>Meilleurs scores</h3>
             <?php
-            // On récupère les scores
-            $scores = getScores();
-            // On affiche les scores
-            foreach($scores as $score) {
-                echo '<p>#'.$score['id']. ' - ' . $score['timer'] . '</p>';
-            }
-            if(sizeof($scores) === 0) {
-                echo '<p>Aucun score enregistré</p>';
-            }
+                // On récupère et on affiche le tableau des meilleurs scores grâce à notre fonction getScores() de notre fichier functions.php
+                echo getScores();
             ?>
         </div>
         <button id="start-button" class="btn btn-primary">Jouer</button>

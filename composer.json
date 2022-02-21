@@ -1,0 +1,19 @@
+{
+    "name": "boreales/memory-oclock",
+    "description": "Un jeu de cartes mémoire avec un zeste de nostalgie",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Boréales Créations",
+            "email": "boreales.creations@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "php/"
+        }
+    }
+}

@@ -15,7 +15,7 @@ $(document).ready(function(){
 });
 
 $(document).on('click', '.card', function() {
-    //On désactive la possibilité de cliquer sur une carte déjà visible
+    //On change la classe CSS de la carte pour qu'elle ne soit plus cliquable via la classe .card utilisée ici
     $(this).addClass('flipped').removeClass('card');
     //On récupère l'id de la carte cliquée
     let id = $(this).attr('data-id');
@@ -32,10 +32,6 @@ $(document).on('click', '.card', function() {
         cardsVisible.push(id);
         console.log("Premier clic",cardsVisible);
     }
-});
-
-$(document).on('click', '.flipped', function(e){
-    e.preventDefault();
 });
 
 function initialize(){
@@ -123,7 +119,7 @@ function checkCards(first, second){
         //On retourne de nouveau les cartes en affichant l'image servant pour le dos de chacune
         $('[data-id='+first+']').attr('src', 'img/card-back.jpg');
         $('[data-id='+second+']').attr('src', 'img/card-back.jpg');
-        //Puis on réactive la possibilité qu'elles soient cliquables grâce à l'événement "click"
+        //Puis on réactive la possibilité qu'elles soient cliquables en leur rendant la classe card
         $('[data-id='+first+']').addClass('card').removeClass('flipped');
         $('[data-id='+second+']').addClass('card').removeClass('flipped');
     }
