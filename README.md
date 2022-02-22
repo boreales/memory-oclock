@@ -92,7 +92,19 @@ Il vous faut donc un fichier .env au même endroit que votre docker-compose.yml 
     MYSQL_USER=myuser
     MYSQL_PASSWORD=password
 
-Et n'oublions pas une fois nos containers lancé avec la commande docker-compose up, de créer la table Score dans notre base de données avec cette commande qui exécutera du code SQL directement dans notre container: 
+Ok super notre base de données est créée, on y va maintenant ? 
+Alors, oui c'est bien beau d'avoir une base de données mais à l'intérieur il nous faudrait peut être une table pour enregistrer les scores avec les champs nécessaires.
+
+On va donc créer un fichier db.sql qui contient la requête SQL de création de la table.
+
+```
+    CREATE TABLE IF NOT EXISTS score (
+        `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        `timer` VARCHAR(255) NOT NULL
+    );
+```
+
+Maintenant il faut exécuter ce code SQL dans notre dans notre container de base de données, via Docker comme ceci : 
 
 ```
     docker exec -i mysql-container mysql -umyuser -ppassword mydb < db.sql
@@ -130,6 +142,20 @@ DB_PASSWORD="password"
 Toujours par souci de clarté on va aussi séparer nos langages avec un dossier php, un dossier css, un dossier js et un dossier img pour les photos de nos cartes.
 
 On peut ensuite également créer à l'intérieur du dossier php un dossier controller et un dossier model pour séparer notre code sous forme de Modèle-Vue-Contrôleur. Même si ici nous n'aurons qu'une vue qui est le fichier principal index.php.
+
+## Captures d'écran
+
+![Page d'accueil du jeu](https://i.ibb.co/N9NmnG8/Capture-d-e-cran-2022-02-22-a-11-42-11.png "Page d'accueil du jeu")
+Page d'accueil du jeu
+
+![Lancement du jeu](https://i.ibb.co/zr9xCRC/Capture-d-e-cran-2022-02-22-a-11-42-20.png "Lancement du jeu")
+Lancement du jeu
+
+![Fin de partie gagnée](https://i.ibb.co/yVMhqVc/Capture-d-e-cran-2022-02-22-a-11-42-51.png "Fin de partie gagnée")
+Fin de partie gagnée
+
+![Fin de partie perdue](https://i.ibb.co/bR4GrJZ/Capture-d-e-cran-2022-02-22-a-12-07-02.png "Fin de partie perdue")
+Fin de partie perdue
 
 ## Ressources
 

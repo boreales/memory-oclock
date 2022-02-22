@@ -2,6 +2,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #000A21;
     color: #fff;
+    background: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, #000000 100%), url('../img/background.jpg') no-repeat center center fixed;
 }
 .container{
     width:90%;
@@ -34,6 +35,7 @@ body{
 }
 .inner-container{
     display: none;
+    margin-bottom:50px;
 }
 .game-board-inner{
     height: 400px;

@@ -8,10 +8,10 @@ function saveScore(time){
         data: {function: 'setScore', arguments: [time]}, //On souhaite utiliser la fonction setScore du controller et lui passer comme argument le temps du joueur
         success:function(data){ //En cas de succès de notre fonction AJAX on récupère le retour du controller
             if(data == 1) { //Si la réponse côté serveur vaut 1 alors tout s'est bien passé
-                console('Score enregistré');
+                console.log('Score enregistré');
             }
             else{
-                console('Erreur lors de l\'enregistrement du score');
+                console.log('Erreur lors de l\'enregistrement du score');
             }
         },
         error: function(data){ //En cas d'erreur de notre fonction AJAX on récupère le retour du controller

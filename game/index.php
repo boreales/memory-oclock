@@ -41,6 +41,7 @@ require('php/functions.php');
                 </div>
                 <div class="game-progress-bar-timer">
                     <div class="game-bar-timer"></div>
+                    <div class="game-timer-text">03:00</div>
                 </div>
             </div>
         </div>
