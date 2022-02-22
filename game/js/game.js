@@ -53,7 +53,8 @@ $(document).on('click', '.card', function() {
         on prévoit d'attendre 5s avant de comparer les cartes 
         pour montrer la face visible au joueur même s'il perd.
         setInterval permet d'ajouter un délai entre chaque exécution d'une fonction.
-        Dans notre cas checkCards() sera exécutée qu'une seule fois car elle vide elle-même le tableau de cartes visible.
+        Dans notre cas checkCards() sera exécutée qu'une seule fois car elle vide elle-même 
+        le tableau de cartes visible.
         */
         interval = setInterval(checkCards, 500, cardsVisible[0], id);
     }
@@ -151,7 +152,10 @@ function countDownTimer(){
 
         //Si le temps est écoulé et donc égal à 0, le joueur a perdu
         if(timeLeft === 0){
-            //On affiche une alerte pour prévenir le joueur qu'il manque de mémoire
+            /*
+            On affiche une alert, c'est à dire une pop-in à l'écran pour prévenir le joueur qu'il manque de mémoire.
+            Non il n'a pas Alzheimer il a juste perdu la partie, rassurez-vous.
+            */
             alert("Malheureusement votre mémoire semble saturée ... (Vous avez perdu !)");
 
             //On rafraîchit la page afin que le joueur recommence une partie.
@@ -177,17 +181,25 @@ function checkCards(first, second){
             alert('Bravo, vous avez une superbe mémoire interne dans votre tête !');
             //Puis on sauvegarde le temps restant dans la base de données ce qui correspond au score du joueur
             let time = 180 - timeLeft;
-            console.log('Temps total', time);
             saveScore(time);
-            //On rafraichît la page afin que le joueur recommence une partie.
+            /*
+            On rafraichît la page afin que le joueur recommence une partie via la fonction window.location.reload() 
+            qui permet de recharger la page dans le navigateur.
+            */
             window.location.reload();
         }
-        //On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id des cartes désormais trouvées
+        /*
+        On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id 
+        des cartes désormais trouvées
+        */
         cardsVisible = [];
     }
     //Si les deux id sont différents c'est perdu
     else{
-        //On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id des cartes désormais trouvées
+        /*
+        On prend soin de vider le tableau des cartes visibles afin de ne pas conserver les précédents id 
+        des cartes désormais trouvées.
+        */
         cardsVisible = [];
         //On retourne de nouveau les cartes en affichant l'image servant pour le dos de chacune
         $('[data-id='+first+']').attr('src', 'img/card-back.jpg');
