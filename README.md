@@ -145,16 +145,16 @@ On peut ensuite également créer à l'intérieur du dossier php un dossier cont
 
 ## Captures d'écran
 
-![Page d'accueil du jeu](https://i.ibb.co/N9NmnG8/Capture-d-e-cran-2022-02-22-a-11-42-11.png "Page d'accueil du jeu")
+![Page d'accueil du jeu](https://i.ibb.co/Y2bz10X/Capture-d-e-cran-2022-02-22-a-11-42-11.png "Page d'accueil du jeu")
 Page d'accueil du jeu
 
-![Lancement du jeu](https://i.ibb.co/zr9xCRC/Capture-d-e-cran-2022-02-22-a-11-42-20.png "Lancement du jeu")
+![Lancement du jeu](https://i.ibb.co/f1GWSFx/Capture-d-e-cran-2022-02-22-a-11-42-20.png "Lancement du jeu")
 Lancement du jeu
 
-![Fin de partie gagnée](https://i.ibb.co/yVMhqVc/Capture-d-e-cran-2022-02-22-a-11-42-51.png "Fin de partie gagnée")
+![Fin de partie gagnée](https://i.ibb.co/QcJx1Cr/Capture-d-e-cran-2022-02-22-a-11-42-51.png "Fin de partie gagnée")
 Fin de partie gagnée
 
-![Fin de partie perdue](https://i.ibb.co/bR4GrJZ/Capture-d-e-cran-2022-02-22-a-12-07-02.png "Fin de partie perdue")
+![Fin de partie perdue](https://i.ibb.co/qC7rQRC/Capture-d-e-cran-2022-02-22-a-12-07-02.png "Fin de partie perdue")
 Fin de partie perdue
 
 ## Ressources
